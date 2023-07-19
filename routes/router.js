@@ -15,13 +15,13 @@ router
   .delete("/vuelo/delete", VueloController.delete)
  
 
-   //*****pasajero******/
-  .get("/pasajero/getall", PasajeroController.getAll)
-  .post("/pasajero/getone/:codigo_pasajero", PasajeroController.getOne)
-  .post("/pasajero/insert", PasajeroController.post)
-  .put("/pasajero/update/:codigo_pasajero", PasajeroController.put)
-  .delete("/pasajero/delete/:codigo_pasajero", PasajeroController.delete)
-  .use(PasajeroController.error404).use(VueloController.error404);
+   //*****Pasajero******/
+  .get("/pasajero/getall", pasajeroController.getAll)
+  .post("/Pasajero/getone/:codigo_pasajero", pasajeroController.getOne)
+  .post("/pasajero/insert", pasajeroController.post)
+  .put("/pasajero/update/:codigo_pasajero", pasajeroController.put)
+  .delete("/pasajero/delete/:codigo_pasajero", pasajeroController.delete)
+  .use(pasajeroController.error404).use(vueloController.error404);
 
   router
 //*****Avion******/
